@@ -1,0 +1,325 @@
+import { HabitQuestion, StudentProfile } from '../types';
+
+export const HABIT_QUESTIONS: HabitQuestion[] = [
+  // 1. 집중도 및 몰입
+  {
+    id: 1,
+    category: 'concentration',
+    categoryLabel: '집중도 및 몰입',
+    question: '공부를 시작할 때 다른 생각이나 잡념 없이 10분 이내로 빠르게 몰입할 수 있다.',
+  },
+  {
+    id: 2,
+    category: 'concentration',
+    categoryLabel: '집중도 및 몰입',
+    question: '한 번 공부를 시작하면 최소 50분 이상 흐트러짐 없이 높은 집중 상태를 유지한다.',
+  },
+  {
+    id: 3,
+    category: 'concentration',
+    categoryLabel: '집중도 및 몰입',
+    question: '어려운 킬러 문항이나 긴 지문을 만났을 때 쉽게 포기하지 않고 끈기 있게 파고든다.',
+  },
+
+  // 2. 시간 관리 및 계획성
+  {
+    id: 4,
+    category: 'timeManagement',
+    categoryLabel: '시간 관리 및 계획성',
+    question: '매일 아침 또는 전날 밤에 구체적인 학습 분량과 우선순위를 정한 스터디 플래너를 작성한다.',
+  },
+  {
+    id: 5,
+    category: 'timeManagement',
+    categoryLabel: '시간 관리 및 계획성',
+    question: '세워둔 학습 계획의 80% 이상을 당일 안에 실제로 완료하고 점검(피드백)한다.',
+  },
+  {
+    id: 6,
+    category: 'timeManagement',
+    categoryLabel: '시간 관리 및 계획성',
+    question: '시험 3~4주 전부터 주차별로 체계적인 시험 대비 로드맵을 수립하여 실행한다.',
+  },
+
+  // 3. 오답 및 복습 루틴
+  {
+    id: 7,
+    category: 'review',
+    categoryLabel: '오답 및 복습 루틴',
+    question: '문제를 풀고 채점한 뒤, 틀린 이유(개념 부족, 계산 실수, 지문 오독 등)를 구체적으로 오답노트에 적는다.',
+  },
+  {
+    id: 8,
+    category: 'review',
+    categoryLabel: '오답 및 복습 루틴',
+    question: '당일 배운 핵심 개념이나 인강 내용은 24시간 이내에 백지 복습이나 요약으로 반드시 정리한다.',
+  },
+  {
+    id: 9,
+    category: 'review',
+    categoryLabel: '오답 및 복습 루틴',
+    question: '한 번 푼 문제집이라도 틀렸던 문항은 최소 2~3회 이상 주기를 두고 다시 풀어본다.',
+  },
+
+  // 4. 시험 불안 및 멘탈 관리
+  {
+    id: 10,
+    category: 'anxiety',
+    categoryLabel: '시험 불안 및 멘탈 관리',
+    question: '시험 시작 전이나 시험 도중 심한 불안감이나 두근거림 없이 차분하게 페이스를 유지한다.',
+  },
+  {
+    id: 11,
+    category: 'anxiety',
+    categoryLabel: '시험 불안 및 멘탈 관리',
+    question: '모르는 문제나 막히는 문제를 만났을 때 패닉에 빠지지 않고 별표 치고 넘어갈 수 있다.',
+  },
+  {
+    id: 12,
+    category: 'anxiety',
+    categoryLabel: '시험 불안 및 멘탈 관리',
+    question: '시험 결과가 기대에 못 미치더라도 자책하기보다 원인을 분석하고 다음 시험을 위한 동기로 삼는다.',
+  },
+
+  // 5. 디지털 기기 및 환경 통제력
+  {
+    id: 13,
+    category: 'digital',
+    categoryLabel: '디지털 기기 및 환경 통제력',
+    question: '자습 시간 동안 스마트폰을 끄거나 다른 방/가방에 보관하여 알림에 방해받지 않는다.',
+  },
+  {
+    id: 14,
+    category: 'digital',
+    categoryLabel: '디지털 기기 및 환경 통제력',
+    question: '유튜브 쇼츠, 인스타그램, 웹툰, 게임 등의 미디어 사용 시간을 스스로 절제할 수 있다.',
+  },
+  {
+    id: 15,
+    category: 'digital',
+    categoryLabel: '디지털 기기 및 환경 통제력',
+    question: '책상 위에는 지금 공부하는 과목의 책과 필기구 외에 불필요한 물건을 깨끗이 치워둔다.',
+  },
+];
+
+export const INITIAL_STUDENTS: StudentProfile[] = [
+  {
+    id: 'std_01',
+    name: '김서연',
+    gradeLevel: '고등학교 2학년',
+    track: '자연계열',
+    targetMajor: '컴퓨터공학과',
+    targetUniversity: '연세대학교',
+    parentName: '이지은',
+    parentPhone: '010-3849-2910',
+    notes: '학업 열의가 매우 높으나 수학 고난도 킬러 문제 해결에 심리적 부담을 느낌. 과목 간 균형이 우수함.',
+    exams: [
+      {
+        id: 'term_1_mid',
+        termName: '2025학년도 1학기 중간고사',
+        date: '2025-05-02',
+        scores: [
+          { id: 'sc_01', subject: '국어', rawScore: 84, grade: 2, standardScore: 126, percentile: 91, rankClass: 3, rankTotal: 18, targetScore: 92, feedback: '문학 갈래 복합 지문에서 시간 소모 큼' },
+          { id: 'sc_02', subject: '수학(수1)', rawScore: 78, grade: 3, standardScore: 122, percentile: 82, rankClass: 6, rankTotal: 34, targetScore: 90, feedback: '삼각함수 활용 및 수열 귀납법 오답 발생' },
+          { id: 'sc_03', subject: '영어', rawScore: 88, grade: 2, standardScore: 128, percentile: 93, rankClass: 2, rankTotal: 14, targetScore: 95, feedback: '빈칸 추론 2문항 오답, 어휘력 우수' },
+          { id: 'sc_04', subject: '물리학I', rawScore: 81, grade: 3, standardScore: 61, percentile: 83, rankClass: 5, rankTotal: 29, targetScore: 90, feedback: '역학적 에너지 보존 파트 계산 지연' },
+          { id: 'sc_05', subject: '화학I', rawScore: 85, grade: 2, standardScore: 64, percentile: 90, rankClass: 3, rankTotal: 19, targetScore: 92, feedback: '양적 관계 파트 기본기는 탄탄함' },
+        ],
+      },
+      {
+        id: 'term_1_final',
+        termName: '2025학년도 1학기 기말고사',
+        date: '2025-07-08',
+        scores: [
+          { id: 'sc_06', subject: '국어', rawScore: 89, grade: 2, standardScore: 130, percentile: 94, rankClass: 2, rankTotal: 12, targetScore: 92, feedback: '독서 제재별 독해 훈련으로 성적 5점 상승' },
+          { id: 'sc_07', subject: '수학(수1)', rawScore: 85, grade: 2, standardScore: 131, percentile: 92, rankClass: 3, rankTotal: 16, targetScore: 90, feedback: '수열 파트 오답 집중 클리닉 효과로 등급 상승(+7점)' },
+          { id: 'sc_08', subject: '영어', rawScore: 91, grade: 1, standardScore: 134, percentile: 97, rankClass: 1, rankTotal: 8, targetScore: 95, feedback: '순서 배열 및 문장 삽입 완벽 공략, 1등급 진입' },
+          { id: 'sc_09', subject: '물리학I', rawScore: 88, grade: 2, standardScore: 66, percentile: 92, rankClass: 2, rankTotal: 15, targetScore: 90, feedback: '역학 킬러 유형 적응 완료(+7점 상승)' },
+          { id: 'sc_10', subject: '화학I', rawScore: 87, grade: 2, standardScore: 65, percentile: 91, rankClass: 3, rankTotal: 18, targetScore: 92, feedback: '몰 농도 계산 실수 1문항 제외하고 안정적' },
+        ],
+      },
+    ],
+    studyHours: [
+      { subject: '수학', selfStudyHours: 14, lectureHours: 6, totalWeeklyHours: 20, studyMethod: '기출문제집 반복 및 인강 수강', difficultyNote: '준킬러 문항 접근 시 아이디어 발상이 늦음' },
+      { subject: '영어', selfStudyHours: 6, lectureHours: 3, totalWeeklyHours: 9, studyMethod: '매일 어휘 40개 암기 및 기출 지문 분석', difficultyNote: '안정적이나 고난도 추상적 철학 지문 독해 시 해석 지연' },
+      { subject: '국어', selfStudyHours: 7, lectureHours: 3, totalWeeklyHours: 10, studyMethod: 'EBS 연계교재 분석 및 모의고사 오답노트', difficultyNote: '비문학 과학/기술 지문 정보 처리 속도' },
+      { subject: '물리학I', selfStudyHours: 5, lectureHours: 3, totalWeeklyHours: 8, studyMethod: '유형별 문제 풀이 및 공식 유도 연습', difficultyNote: '힘의 평형 및 열역학 응용 문제' },
+      { subject: '화학I', selfStudyHours: 4, lectureHours: 2, totalWeeklyHours: 6, studyMethod: '개념노트 정독 및 중화반응 양적계산 연습', difficultyNote: '시간 제한 압박 시 계산 오류' },
+    ],
+    habitResult: {
+      totalScore: 82,
+      overallGrade: '우수 (A등급)',
+      categoryScores: [
+        { category: '집중도 및 몰입', categoryKey: 'concentration', score: 86, status: '우수', comment: '몰입 시작이 빠르고 끈기 있게 집중합니다.', tip: '90분 집중 후 10분 온전한 휴식 루틴을 권장합니다.' },
+        { category: '시간 관리 및 계획성', categoryKey: 'timeManagement', score: 80, status: '우수', comment: '플래너 작성 습관이 정착되어 실천율이 높습니다.', tip: '자투리 시간(이동/쉬는 시간) 활용법을 조금 더 고도화하세요.' },
+        { category: '오답 및 복습 루틴', categoryKey: 'review', score: 88, status: '최우수', comment: '오답 원인 분석과 3회독 주기가 매우 철저합니다.', tip: '현 오답 노트 방식을 후배들의 모범으로 삼을 수준입니다.' },
+        { category: '시험 불안 및 멘탈 관리', categoryKey: 'anxiety', score: 68, status: '개선필요', comment: '시험 직전 심리적 긴장감이 다소 높아 실수가 발생합니다.', tip: '시험 1주일 전 모의 실전 환경(타이머, OMR) 훈련을 병행하세요.' },
+        { category: '디지털 기기 및 환경 통제력', categoryKey: 'digital', score: 88, status: '최우수', comment: '학습 시간 중 스마트폰을 완전 격리하고 있습니다.', tip: '지금의 자기통제력을 수능까지 지속 유지하세요.' },
+      ],
+      keyStrengths: ['체계적인 오답노트 정리', '학습 시간 중 완벽한 스마트폰 분리', '높은 학습 계획 실천율'],
+      keyWeaknesses: ['실전 시험장 타임어택 압박감', '수학 킬러 문항 앞에서의 조급함'],
+      recommendedActions: [
+        '주 1회 실전 모의고사 타임어택(OMR 카드 작성 포함) 훈련으로 시험 불안 해소',
+        '수학 준킬러 문항 1일 3제(풀이 시간 7분 제한) 집중 루틴화',
+        '시험 당일 마인드셋 멘탈 시뮬레이션 노트 작성',
+      ],
+      surveyDate: '2025-07-10',
+    },
+    weeklyPlan: [
+      { id: 'wp_1', day: '월', timeSlot: '야간 (19:00~23:00)', subject: '수학(수1)', topic: '수열 귀납법 고난도 기출 6제', targetMethod: '한 문제당 10분 고민 후 해설 비교, 발상 포인트 요약', completed: true },
+      { id: 'wp_2', day: '화', timeSlot: '야간 (19:00~23:00)', subject: '국어', topic: '비문학 과학기술 제재 2지문 구조독해', targetMethod: '문단별 핵심어 밑줄 치고 문단 간 관계도 도식화', completed: true },
+      { id: 'wp_3', day: '수', timeSlot: '야간 (19:00~23:00)', subject: '물리학I', topic: '역학적 에너지 보존 심화 8제', targetMethod: '공식 암기보다 물리적 상황 스케치 후 풀이', completed: false },
+      { id: 'wp_4', day: '목', timeSlot: '야간 (19:00~23:00)', subject: '영어', topic: '수능특강 고난도 빈칸 5문항 & 어휘 50개', targetMethod: '지문 내 논리적 단서(역접, 예시) 형광펜 표시', completed: false },
+      { id: 'wp_5', day: '금', timeSlot: '야간 (19:00~23:00)', subject: '화학I', topic: '몰 농도 및 중화반응 킬러 5제', targetMethod: '비례식 풀이법과 표 정리법 비교 분석', completed: false },
+      { id: 'wp_6', day: '토', timeSlot: '오전 (09:00~12:00)', subject: '수학(수1)', topic: '주간 오답 문항 재풀이 및 백지 복습', targetMethod: '틀렸던 12문항 백지에 막힘없이 전개', completed: false },
+      { id: 'wp_7', day: '토', timeSlot: '오후 (13:30~17:30)', subject: '국어/영어', topic: '실전 모의고사 1회차 타임어택', targetMethod: '실제 시험시간 맞춰 OMR 작성 연습', completed: false },
+      { id: 'wp_8', day: '일', timeSlot: '야간 (19:00~23:00)', subject: '종합', topic: '주간 플래너 점검 및 다음 주 취약점 로드맵 작성', targetMethod: '달성률 계산 및 미완료 과제 월요일 재배치', completed: false },
+    ],
+  },
+  {
+    id: 'std_02',
+    name: '박지훈',
+    gradeLevel: '고등학교 2학년',
+    track: '인문계열',
+    targetMajor: '경영학과',
+    targetUniversity: '고려대학교',
+    parentName: '박창호',
+    parentPhone: '010-8274-9102',
+    notes: '국어, 영어 감각은 최상위권이나 수학에 대한 막연한 두려움이 있어 학습 시간이 턱없이 부족함. 수학 학습 습관 교정이 필수.',
+    exams: [
+      {
+        id: 'term_1_mid_p',
+        termName: '2025학년도 1학기 중간고사',
+        date: '2025-05-02',
+        scores: [
+          { id: 'sc_p1', subject: '국어', rawScore: 94, grade: 1, standardScore: 136, percentile: 98, rankClass: 1, rankTotal: 3, targetScore: 96, feedback: '문학 및 화작 만점, 비문학 1문항 제외 완벽' },
+          { id: 'sc_p2', subject: '수학(수1)', rawScore: 66, grade: 4, standardScore: 110, percentile: 68, rankClass: 14, rankTotal: 78, targetScore: 82, feedback: '지수로그 연산만 정답, 함수 활용 및 고난도 백지' },
+          { id: 'sc_p3', subject: '영어', rawScore: 93, grade: 1, standardScore: 135, percentile: 98, rankClass: 1, rankTotal: 5, targetScore: 95, feedback: '어휘력 풍부하고 독해 속도 빠름' },
+          { id: 'sc_p4', subject: '사회문화', rawScore: 89, grade: 2, standardScore: 66, percentile: 93, rankClass: 2, rankTotal: 11, targetScore: 94, feedback: '개념 명확, 도표 통계 문제 추가 대비 필요' },
+          { id: 'sc_p5', subject: '생활과윤리', rawScore: 91, grade: 1, standardScore: 68, percentile: 96, rankClass: 1, rankTotal: 7, targetScore: 95, feedback: '학자별 입장 비교 탁월' },
+        ],
+      },
+      {
+        id: 'term_1_final_p',
+        termName: '2025학년도 1학기 기말고사',
+        date: '2025-07-08',
+        scores: [
+          { id: 'sc_p6', subject: '국어', rawScore: 96, grade: 1, standardScore: 138, percentile: 99, rankClass: 1, rankTotal: 2, targetScore: 96, feedback: '전교 2등 유지, 국어 절대 강자' },
+          { id: 'sc_p7', subject: '수학(수1)', rawScore: 73, grade: 3, standardScore: 118, percentile: 77, rankClass: 9, rankTotal: 48, targetScore: 82, feedback: '삼각함수 기본 문제 사수로 4등급 탈출, 3등급 진입(+7점)' },
+          { id: 'sc_p8', subject: '영어', rawScore: 95, grade: 1, standardScore: 137, percentile: 99, rankClass: 1, rankTotal: 4, targetScore: 95, feedback: '안정적인 1등급' },
+          { id: 'sc_p9', subject: '사회문화', rawScore: 92, grade: 1, standardScore: 68, percentile: 96, rankClass: 1, rankTotal: 6, targetScore: 94, feedback: '도표 특강 수강 후 정답률 급상승' },
+          { id: 'sc_p10', subject: '생활과윤리', rawScore: 94, grade: 1, standardScore: 70, percentile: 98, rankClass: 1, rankTotal: 4, targetScore: 95, feedback: '만점에 가까운 이해도' },
+        ],
+      },
+    ],
+    studyHours: [
+      { subject: '수학', selfStudyHours: 8, lectureHours: 5, totalWeeklyHours: 13, studyMethod: '인강 시청 위주, 문제 직접 풀기 회피', difficultyNote: '해설지를 너무 일찍 보며, 자력 풀이 시간이 부족함' },
+      { subject: '국어', selfStudyHours: 5, lectureHours: 2, totalWeeklyHours: 7, studyMethod: '고난도 지문 위주 감 유지', difficultyNote: '특별한 어려움 없음' },
+      { subject: '영어', selfStudyHours: 4, lectureHours: 2, totalWeeklyHours: 6, studyMethod: '기출 어휘 체크 및 주 1회 실모', difficultyNote: '특별한 어려움 없음' },
+      { subject: '사회문화', selfStudyHours: 4, lectureHours: 2, totalWeeklyHours: 6, studyMethod: '도표 분석 스킬 훈련 및 기출', difficultyNote: '도표 문제 시간 단축' },
+      { subject: '생활과윤리', selfStudyHours: 3, lectureHours: 1, totalWeeklyHours: 4, studyMethod: '개념 복습 및 선지 OX 훈련', difficultyNote: '함정 선지 판별' },
+    ],
+    habitResult: {
+      totalScore: 74,
+      overallGrade: '양호 (B등급)',
+      categoryScores: [
+        { category: '집중도 및 몰입', categoryKey: 'concentration', score: 78, status: '양호', comment: '좋아하는 과목(국어/영어)은 집중하나, 수학은 20분 만에 딴짓 시작.', tip: '수학을 25분 집중 + 5분 휴식(포모도로)으로 잘게 쪼개어 접근하세요.' },
+        { category: '시간 관리 및 계획성', categoryKey: 'timeManagement', score: 72, status: '양호', comment: '좋아하는 과목 위주로 시간을 편식하는 경향이 있습니다.', tip: '가장 공부하기 싫은 수학을 매일 첫 번째 순서로 배치(Eat that frog)하세요.' },
+        { category: '오답 및 복습 루틴', categoryKey: 'review', score: 62, status: '개선필요', comment: '수학 오답 시 해설지를 읽고 넘어가는 단순 눈팅 복습.', tip: '해설지를 덮고 백지에 처음부터 끝까지 혼자 풀어보는 필사 복습 필수.' },
+        { category: '시험 불안 및 멘탈 관리', categoryKey: 'anxiety', score: 85, status: '최우수', comment: '전반적인 시험 멘탈과 자신감이 우수합니다.', tip: '긍정적인 멘탈을 수학 영역 극복의 무기로 삼으세요.' },
+        { category: '디지털 기기 및 환경 통제력', categoryKey: 'digital', score: 73, status: '양호', comment: '수학 문제 풀다가 막히면 폰을 켜서 유튜브를 보는 패턴.', tip: '수학 공부 시간만큼은 폰을 독서실 보관함에 넣으세요.' },
+      ],
+      keyStrengths: ['인문계열 핵심 과목(국어, 영어, 사탐) 탁월한 성취도', '흔들리지 않는 시험장 멘탈'],
+      keyWeaknesses: ['수학 과목에 대한 심리적 기피와 절대 자습량 부족', '해설지에 의존하는 수동적 복습 습관'],
+      recommendedActions: [
+        '수학 공부 시간 매일 3시간 이상 강제 확보 (자습 시간의 50% 이상 투입)',
+        '해설지 3분 이상 금지 룰: 문제 막혀도 최소 7분간 개념 떠올리며 고민하기',
+        '틀린 문제는 3단계(당일, 3일 후, 주말) 오답 재풀이 시스템 적용',
+      ],
+      surveyDate: '2025-07-09',
+    },
+    weeklyPlan: [
+      { id: 'wp_p1', day: '월', timeSlot: '야간 (19:00~23:00)', subject: '수학(수1)', topic: '삼각함수 그래프 기본 15제 자력 풀이', targetMethod: '해설지 없이 공식 유도하며 끝까지 풀기', completed: true },
+      { id: 'wp_p2', day: '화', timeSlot: '야간 (19:00~23:00)', subject: '수학(수1)', topic: '수열의 합 기본~중급 유형 12제', targetMethod: '규칙성 찾기 및 나열 연습', completed: true },
+      { id: 'wp_p3', day: '수', timeSlot: '야간 (19:00~23:00)', subject: '사회문화', topic: '인구부양비 도표 기출 4제 집중 풀이', targetMethod: '표 그리기 도식화 공식 적용', completed: false },
+      { id: 'wp_p4', day: '목', timeSlot: '야간 (19:00~23:00)', subject: '수학(수1)', topic: '월/화 오답 문항 백지 재풀이 6제', targetMethod: '왜 틀렸는지 풀이 옆에 붉은색 코멘트 작성', completed: false },
+      { id: 'wp_p5', day: '금', timeSlot: '야간 (19:00~23:00)', subject: '국어/영어', topic: '국어 비문학 2지문 + 영어 고난도 3지문', targetMethod: '감 유지용 실전 풀이', completed: false },
+      { id: 'wp_p6', day: '토', timeSlot: '오전 (09:00~12:00)', subject: '수학(수1)', topic: '학교 교과서 & 부교재 변형 문항 정복', targetMethod: '학교 시험 빈출 유형 완벽 체화', completed: false },
+      { id: 'wp_p7', day: '토', timeSlot: '오후 (13:30~17:30)', subject: '생활과윤리', topic: '롤스/노직 분배적 정의론 심화 비교', targetMethod: '원전 지문 선지 분석표 완성', completed: false },
+      { id: 'wp_p8', day: '일', timeSlot: '야간 (19:00~23:00)', subject: '수학(수1)', topic: '주간 수학 100제 달성 점검 및 오답 바인더 정리', targetMethod: '스스로 약점 단원 체크리스트 업데이트', completed: false },
+    ],
+  },
+  {
+    id: 'std_03',
+    name: '이민우',
+    gradeLevel: '고등학교 1학년',
+    track: '자연계열',
+    targetMajor: '전자전기공학부',
+    targetUniversity: '성균관대학교',
+    parentName: '정성희',
+    parentPhone: '010-4491-0982',
+    notes: '수리적 감각과 이해력은 뛰어나나 전반적인 자기주도학습 습관이 아직 미정착됨. 스마트폰 게임 및 SNS 사용 시간이 과다함.',
+    exams: [
+      {
+        id: 'term_1_mid_m',
+        termName: '2025학년도 1학기 중간고사',
+        date: '2025-05-02',
+        scores: [
+          { id: 'sc_m1', subject: '국어', rawScore: 71, grade: 4, standardScore: 114, percentile: 66, rankClass: 12, rankTotal: 65, targetScore: 85, feedback: '문법 개념 정리 부실, 어휘력 부족' },
+          { id: 'sc_m2', subject: '공통수학', rawScore: 82, grade: 3, standardScore: 124, percentile: 85, rankClass: 5, rankTotal: 28, targetScore: 92, feedback: '다항식 연산 실수 및 복소수 성질 숙지 미흡' },
+          { id: 'sc_m3', subject: '영어', rawScore: 68, grade: 4, standardScore: 112, percentile: 64, rankClass: 13, rankTotal: 72, targetScore: 85, feedback: '기본 어휘 부족으로 문장 독해 단절' },
+          { id: 'sc_m4', subject: '통합사회', rawScore: 79, grade: 3, standardScore: 60, percentile: 80, rankClass: 6, rankTotal: 35, targetScore: 88, feedback: '헌법과 기본권 파트 암기 미비' },
+          { id: 'sc_m5', subject: '통합과학', rawScore: 86, grade: 2, standardScore: 65, percentile: 91, rankClass: 3, rankTotal: 17, targetScore: 92, feedback: '물리/화학 영역 우수, 생명과학 암기 누락' },
+        ],
+      },
+      {
+        id: 'term_1_final_m',
+        termName: '2025학년도 1학기 기말고사',
+        date: '2025-07-08',
+        scores: [
+          { id: 'sc_m6', subject: '국어', rawScore: 79, grade: 3, standardScore: 121, percentile: 81, rankClass: 7, rankTotal: 38, targetScore: 85, feedback: '문법 단권화 노트 작성 후 8점 상승' },
+          { id: 'sc_m7', subject: '공통수학', rawScore: 89, grade: 2, standardScore: 131, percentile: 93, rankClass: 3, rankTotal: 15, targetScore: 92, feedback: '이차방정식과 판별식 유형 마스터(+7점 상승)' },
+          { id: 'sc_m8', subject: '영어', rawScore: 76, grade: 3, standardScore: 119, percentile: 79, rankClass: 8, rankTotal: 44, targetScore: 85, feedback: '단어 매일 30개 암기 시작하여 8점 상승' },
+          { id: 'sc_m9', subject: '통합사회', rawScore: 84, grade: 2, standardScore: 63, percentile: 88, rankClass: 4, rankTotal: 22, targetScore: 88, feedback: '시장 경제와 가격 변동 파트 이해 우수' },
+          { id: 'sc_m10', subject: '통합과학', rawScore: 90, grade: 1, standardScore: 68, percentile: 96, rankClass: 2, rankTotal: 8, targetScore: 92, feedback: '역학 시스템과 지구 시스템 완벽 이해, 1등급 획득' },
+        ],
+      },
+    ],
+    studyHours: [
+      { subject: '공통수학', selfStudyHours: 9, lectureHours: 4, totalWeeklyHours: 13, studyMethod: '유형서 풀이 위주', difficultyNote: '방정식 응용 문장제 문제 해석' },
+      { subject: '영어', selfStudyHours: 5, lectureHours: 3, totalWeeklyHours: 8, studyMethod: '단어장 암기 및 교과서 본문 암기', difficultyNote: '복합 관계대명사 및 서술형 영작' },
+      { subject: '국어', selfStudyHours: 4, lectureHours: 2, totalWeeklyHours: 6, studyMethod: '교과서 본문 해설 및 문제 풀이', difficultyNote: '고전문학 고어 해석 및 갈래 특징' },
+      { subject: '통합과학', selfStudyHours: 4, lectureHours: 2, totalWeeklyHours: 6, studyMethod: '탐구 실험 정리 및 기출', difficultyNote: '생명시스템 세포 소기관 기능 매칭' },
+      { subject: '통합사회', selfStudyHours: 3, lectureHours: 1, totalWeeklyHours: 4, studyMethod: '교과서 밑줄 읽기', difficultyNote: '자료 분석 및 개념 세부 조항 암기' },
+    ],
+    habitResult: {
+      totalScore: 65,
+      overallGrade: '개선필요 (C등급)',
+      categoryScores: [
+        { category: '집중도 및 몰입', categoryKey: 'concentration', score: 65, status: '개선필요', comment: '공부 시작 전 30분 이상 스마트폰 보며 밍기적거림.', tip: '착석 즉시 타이머 10분 설정 후 쉬운 수학 3문제 먼저 풀기로 진입 장벽 낮추기.' },
+        { category: '시간 관리 및 계획성', categoryKey: 'timeManagement', score: 58, status: '위험', comment: '플래너 없이 주먹구구식으로 닥치는 대로 공부함.', tip: '일일 To-Do 체크리스트 3가지만 적고 완료 표시하는 초간단 플래너부터 시작.' },
+        { category: '오답 및 복습 루틴', categoryKey: 'review', score: 64, status: '개선필요', comment: '문제 풀고 채점 후 동그라미/빗금만 치고 끝내는 습관.', tip: '틀린 문제 위에 왜 틀렸는지 한 줄(예: 연산 부호 실수, 공식 오적용) 필수 메모.' },
+        { category: '시험 불안 및 멘탈 관리', categoryKey: 'anxiety', score: 78, status: '양호', comment: '낙천적이며 긍정적인 마인드를 가지고 있습니다.', tip: '낙천성을 실행력과 끈기로 연결하는 코칭이 필요합니다.' },
+        { category: '디지털 기기 및 환경 통제력', categoryKey: 'digital', score: 52, status: '위험', comment: '공부 중 유튜브 쇼츠/릴스 확인으로 집중이 끊어짐.', tip: '독서실이나 자습실에 갈 때 스마트폰 비행기 모드 또는 사물함 보관 규칙 적용.' },
+      ],
+      keyStrengths: ['뛰어난 수리/과학적 직관과 이해 속도', '기말고사 전 과목 평균 6.8점 상승의 성장 잠재력'],
+      keyWeaknesses: ['스마트폰 과몰입 및 공부 시작 지연', '학습 계획 수립과 오답 분석의 부재'],
+      recommendedActions: [
+        '스마트폰 잠금 앱 또는 부모님 보관을 통한 평일 3시간 순공 시간 절대 확보',
+        '매일 저녁 3대 핵심 과제 체크리스트(국/수/영 각 1과제) 실행',
+        '주 1회 취약 단원 개념 지도 백지 그리기 훈련',
+      ],
+      surveyDate: '2025-07-11',
+    },
+    weeklyPlan: [
+      { id: 'wp_m1', day: '월', timeSlot: '야간 (19:00~23:00)', subject: '공통수학', topic: '이차함수 최대최소 표준유형 12제', targetMethod: '그래프 개형 직접 그리고 범위 표시', completed: true },
+      { id: 'wp_m2', day: '화', timeSlot: '야간 (19:00~23:00)', subject: '영어', topic: '필수 어휘 30개 암기 및 셀프 테스트', targetMethod: '틀린 단어는 플래시카드에 적기', completed: true },
+      { id: 'wp_m3', day: '수', timeSlot: '야간 (19:00~23:00)', subject: '국어', topic: '고전문학 가사/시조 핵심 어휘 10선', targetMethod: '현대어 풀이와 대조하며 낭독', completed: false },
+      { id: 'wp_m4', day: '목', timeSlot: '야간 (19:00~23:00)', subject: '통합과학', topic: '화학 결합과 물질의 성질 핵심 정리', targetMethod: '이온결합/공유결합 성질 비교표 작성', completed: false },
+      { id: 'wp_m5', day: '금', timeSlot: '야간 (19:00~23:00)', subject: '공통수학', topic: '주간 오답 문항 7제 스스로 풀기', targetMethod: '답지 보지 않고 끝까지 답 도출', completed: false },
+      { id: 'wp_m6', day: '토', timeSlot: '오전 (09:00~12:00)', subject: '통합사회', topic: '인권 보장과 헌법 단원 핵심 문제', targetMethod: '사례별 기본권 침해 여부 판별', completed: false },
+      { id: 'wp_m7', day: '토', timeSlot: '오후 (13:30~17:30)', subject: '영어/수학', topic: '영어 교과서 본문 2과 빈칸 채우기 & 수학 모의고사 10제', targetMethod: '실전 집중 연습', completed: false },
+      { id: 'wp_m8', day: '일', timeSlot: '야간 (19:00~23:00)', subject: '자기성찰', topic: '스마트폰 사용 시간 체크 및 다음 주 플래너 작성', targetMethod: '목표 달성 시 보상(영화/게임 1시간) 부여', completed: false },
+    ],
+  },
+];
